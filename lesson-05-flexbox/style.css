@@ -1,0 +1,113 @@
+/* ============================================================
+   style.css — ONE file that styles EVERY page that links to it.
+   Comments in CSS look like this (different from HTML!).
+
+   Every CSS rule has the same shape:
+
+       selector {
+         property: value;
+       }
+
+   selector = WHICH elements to style (e.g. all <h1>)
+   property = WHAT to change (color, size, spacing...)
+   value    = HOW to change it
+   Don't forget the ; at the end of each line!
+   ============================================================ */
+
+/* "body" = the whole visible page. Children inherit fonts and colors from it. */
+body {
+  font-family: Arial, sans-serif;   /* try Arial first; if missing, any sans-serif font */
+  background-color: #f4f4f4;        /* a very light gray. # colors = hex codes */
+  color: #333333;                   /* text color: dark gray (softer than pure black) */
+  max-width: 800px;   /* content is never wider than 800px */
+  margin: 0 auto;     /* 0 top/bottom, "auto" left/right = split the leftover space equally */
+}                 /* empty space around the page */
+
+
+/* Every <h1> on every page */
+h1 {
+  color: #d52b1e;                   /* Chilean flag red */
+}
+
+h2 {
+  color: #0039a6;
+}
+
+p {
+  font-size:18px;
+}
+
+a {
+  text-decoration: none;
+  color:#0039a6;
+}
+
+img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+
+/* ============================================================
+   LESSON 4 — THE BOX MODEL
+   Every element is a rectangle made of 4 layers, inside out:
+
+     ┌──────────── margin ────────────┐   space OUTSIDE (pushes others away)
+     │ ┌────────── border ──────────┐ │   the visible edge
+     │ │ ┌──────── padding ───────┐ │ │   space INSIDE, between edge and content
+     │ │ │        CONTENT         │ │ │   the text / image itself
+     │ │ └────────────────────────┘ │ │
+     │ └────────────────────────────┘ │
+     └────────────────────────────────┘
+
+   A dot before a name = a CLASS selector.
+   .demo means "every element with class="demo"".
+   ============================================================ */
+
+.demo {
+  background-color: #ffe08a;   /* yellow, so you can see the box */
+  padding: 20px;               /* space INSIDE the box, around the text */
+  border: 4px solid #333333;   /* thickness, style (solid/dashed/dotted), color */
+  margin: 30px 0;              /* 30px top & bottom, 0 left & right */
+}
+
+/* ----- YOUR EXERCISE: write the .card rule below ----- */
+
+.card{
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  flex: 1;
+  min-width: 200px;
+}
+
+/* ============================================================
+   LESSON 5 — FLEXBOX
+   By default, divs stack vertically (each takes a full line).
+   Flexbox lets a PARENT arrange its CHILDREN in a row or column.
+
+   Key properties (all go on the PARENT, here .cards):
+     display: flex;            turn Flexbox on -> children go in a ROW
+     gap: 20px;                space BETWEEN children
+     justify-content: ...;     horizontal alignment:
+                               flex-start | center | flex-end | space-between
+     align-items: ...;         vertical alignment:
+                               stretch | flex-start | center | flex-end
+     flex-direction: column;   switch back to vertical
+     flex-wrap: wrap;          let children jump to a new line if no room
+
+   One property for the CHILDREN (.card):
+     flex: 1;                  "share the free space equally"
+   ============================================================ */
+
+/* ----- YOUR EXERCISE: write the .cards rule below ----- */
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

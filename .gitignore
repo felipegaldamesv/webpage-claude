@@ -1,0 +1,4 @@
+# Files Git should IGNORE (never save, never upload)
+
+# macOS creates this hidden file in every folder you open in Finder. Useless for the site.
+.DS_Store

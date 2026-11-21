@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6 - Home</title>
+  <!-- link = connects this page to a CSS file.
+         rel="stylesheet" says what kind of file it is; href says where it is. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SEMANTIC TAGS: they work like <div>, but their NAME says what they are.
+         Google and screen readers use them to understand the page.
+         <header> = top of the page, <nav> = navigation menu,
+         <main> = the main content, <footer> = bottom of the page. -->
+    <header>
+      <nav>
+        <a href="index.html" class="logo">Felipe</a>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+  <h1>Hello everyone! This is the main home page</h1>
+
+
+
+  <h2>My Wife</h2>
+  <p>She is perfect</p>
+  <!-- div = a generic box with no meaning of its own. Used to group things.
+         class = a NAME you give to elements so CSS can style them.
+         Many elements can share the same class. -->
+  <div class="demo">I am a box. Inspect me!</div>
+
+  <h2>My hobbies</h2>
+  <!-- NEW: a "container" box (the PARENT) wrapping the three cards (the CHILDREN).
+         Flexbox works on the parent: you tell the PARENT how to arrange its children. -->
+  <div class="cards">
+    <div class="card">
+      <h3>Golf</h3>
+      <p>Working on my swing.</p>
+    </div>
+    <div class="card">
+      <h3>Soccer</h3>
+      <p>Watching and playing.</p>
+    </div>
+    <div class="card">
+      <h3>Playing games</h3>
+      <p>My way to relax.</p>
+    </div>
+  </div> <!-- closes .cards -->
+  <p><a href="about.html">Read more about me</a></p>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Felipe</p>  <!-- &copy; is an "HTML entity": it shows the © symbol -->
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+/* ============================================================
+   style.css — ONE file that styles EVERY page that links to it.
+   Comments in CSS look like this (different from HTML!).
+
+   Every CSS rule has the same shape:
+
+       selector {
+         property: value;
+       }
+
+   selector = WHICH elements to style (e.g. all <h1>)
+   property = WHAT to change (color, size, spacing...)
+   value    = HOW to change it
+   Don't forget the ; at the end of each line!
+   ============================================================ */
+
+/* "body" = the whole visible page. Children inherit fonts and colors from it. */
+body {
+  font-family: Arial, sans-serif;   /* try Arial first; if missing, any sans-serif font */
+  background-color: #f4f4f4;        /* a very light gray. # colors = hex codes */
+  color: #333333;                   /* text color: dark gray (softer than pure black) */
+  max-width: 800px;   /* content is never wider than 800px */
+  margin: 0 auto;     /* 0 top/bottom, "auto" left/right = split the leftover space equally */
+}                 /* empty space around the page */
+
+
+/* Every <h1> on every page */
+h1 {
+  color: #d52b1e;                   /* Chilean flag red */
+}
+
+h2 {
+  color: #0039a6;
+}
+
+p {
+  font-size:18px;
+}
+
+a {
+  text-decoration: none;
+  color:#0039a6;
+}
+
+img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+
+/* ============================================================
+   LESSON 4 — THE BOX MODEL
+   Every element is a rectangle made of 4 layers, inside out:
+
+     ┌──────────── margin ────────────┐   space OUTSIDE (pushes others away)
+     │ ┌────────── border ──────────┐ │   the visible edge
+     │ │ ┌──────── padding ───────┐ │ │   space INSIDE, between edge and content
+     │ │ │        CONTENT         │ │ │   the text / image itself
+     │ │ └────────────────────────┘ │ │
+     │ └────────────────────────────┘ │
+     └────────────────────────────────┘
+
+   A dot before a name = a CLASS selector.
+   .demo means "every element with class="demo"".
+   ============================================================ */
+
+.demo {
+  background-color: #ffe08a;   /* yellow, so you can see the box */
+  padding: 20px;               /* space INSIDE the box, around the text */
+  border: 4px solid #333333;   /* thickness, style (solid/dashed/dotted), color */
+  margin: 30px 0;              /* 30px top & bottom, 0 left & right */
+}
+
+/* ----- YOUR EXERCISE: write the .card rule below ----- */
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
