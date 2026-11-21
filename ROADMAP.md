@@ -1,24 +1,32 @@
-# Web Page – Learning Roadmap
+# Web Page – Learning Roadmap (job-ready track)
 
-Goal: understand how every piece of a website works and how they connect.
+Goal: understand how every piece of software works and connects, with practical
+skills that big tech companies (e.g. Google) actually test and use.
 
-## 0. How the web works (theory, revisited all along)
-- What happens when you type a URL: DNS, servers, HTTP requests/responses
-- Browser vs. server: front end vs. back end
-- The terminal (command line) on your Mac
+## Track A – Build things (web development)
+1. HTML                                  ✅ done
+2. CSS, box model, Flexbox, responsive  ✅ done
+3. Git & GitHub, publishing             ✅ done (basics)
+4. JavaScript – variables, functions, the DOM, events
+5. TypeScript – JavaScript with types (used heavily at Google)
+6. Git like a team – branches, pull requests, code review
+7. Back end with Python – APIs, servers (replaces Ruby: far more used at Google)
+8. Databases – SQL, PostgreSQL, data modeling
+9. Testing – automated tests for every feature
+10. A front-end framework – React or Angular (Angular was created by Google)
+11. Deployment & cloud – Linux, Docker, Google Cloud basics
+12. Security, performance, accessibility
 
-## 1. HTML – structure
-## 2. CSS – style, layout, responsive design (phones)
-## 3. JavaScript – interactivity, the DOM, events
-## 4. Git & GitHub – version control, publishing a site for free
-## 5. JavaScript deeper – fetch, APIs, JSON, async code
-## 6. Back end with Ruby – Ruby language, then Sinatra and Ruby on Rails
-## 7. Databases – SQL, SQLite, PostgreSQL, data modeling
-## 8. Connecting it all – forms, users, login, sessions, REST APIs
-## 9. Security – passwords, HTTPS, common attacks (XSS, SQL injection)
-## 10. Testing – checking your code works automatically
-## 11. Deployment – domains, hosting, putting a real site online
-## 12. Extras – accessibility, performance, SEO, frameworks (React), AI APIs
+## Track B – Pass the interview (computer science)
+Starts once JavaScript basics are solid, then runs alongside Track A.
+- Data structures: arrays, hash maps, stacks, queues, trees, graphs
+- Algorithms: sorting, searching, recursion, BFS/DFS, dynamic programming
+- Big-O: how fast and how memory-hungry code is
+- Practice problems (LeetCode-style), explaining your reasoning out loud
+- System design basics (for later, mid/senior roles)
+- Behavioral interviews: telling your experience as stories
 
 ## Final project
-A real site with data and logins (e.g. a store for the import business).
+A real full-stack app with users, data, tests and a public deployment.
+It doubles as a portfolio piece for applications
+(e.g. a store for the import business).
