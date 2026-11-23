@@ -16,6 +16,7 @@ skills that big tech companies (e.g. Google) actually test and use.
 10. A front-end framework – React or Angular (Angular was created by Google)
 11. Deployment & cloud – Linux, Docker, Google Cloud basics
 12. Security, performance, accessibility
+13. AI in your apps – calling AI APIs, building AI-powered features (job skill + business skill)
 
 ## Track B – Pass the interview (computer science)
 Starts once JavaScript basics are solid, then runs alongside Track A.
@@ -25,6 +26,11 @@ Starts once JavaScript basics are solid, then runs alongside Track A.
 - Practice problems (LeetCode-style), explaining your reasoning out loud
 - System design basics (for later, mid/senior roles)
 - Behavioral interviews: telling your experience as stories
+
+## Track C – Capitalize (turn skills into income)
+- Freelance-ready: build and deploy sites/apps for real clients
+- Your own products: AI-powered tools, the import business store
+- Portfolio on GitHub that proves what you can do
 
 ## Final project
 A real full-stack app with users, data, tests and a public deployment.
