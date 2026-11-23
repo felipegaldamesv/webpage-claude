@@ -33,6 +33,10 @@ function sayHi() {
   greeting.textContent = "Hi " + name + "! JavaScript changed this text.";
 }
 
+function updateDisplay() {
+document.getElementById("counter").textContent = clicks;
+}
+
 
 // ---------- PART 4: events ----------
 // An event is something that happens: a click, a key press, scrolling...
@@ -45,7 +49,7 @@ greetButton.addEventListener("click", sayHi);
 // ---------- PART 5: the counter ----------
 function addOne() {
   clicks = clicks + 1;    // this is why clicks uses let: its value changes
-  document.getElementById("counter").textContent = clicks;
+  updateDisplay();
   console.log("Clicks so far: " + clicks);
 }
 
@@ -59,3 +63,13 @@ document.getElementById("add-button").addEventListener("click", addOne);
 //      - updates the number shown on the page
 // 3. Connect the Reset button's "click" event to resetCounter.
 
+function resetCounter() {
+  clicks = 0;
+  updateDisplay();
+  console.log("Clicks after the reset button: " + clicks);
+}
+
+document.getElementById("reset-button").addEventListener("click", resetCounter);
+
+
+  
