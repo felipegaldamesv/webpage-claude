@@ -42,9 +42,11 @@ function checkMessage() {
     message.textContent = "Wow, 10 clicks or more!";
     // classList.add turns ON a CSS class from JavaScript -> JS and CSS working together
     message.classList.add("success");
+    message.classList.remove("warning");
   } else {
     message.textContent = "";
     message.classList.remove("success");
+    message.classList.remove("warning");
   }
 }
 
@@ -69,21 +71,20 @@ document.getElementById("reset-button").addEventListener("click", resetCounter);
 function checkAge() {
   // .value = what the user typed in the input.
   // It always arrives as TEXT, so Number() converts it to a number.
-  const age = Number(document.getElementById("age-input").value);
+  
   const ageMessage = document.getElementById("age-message");
   const ageText = document.getElementById("age-input").value;
+  const age = Number(ageText);
 
-  if (ageText == "" ) {
+  if (ageText === "" || age < 0) {
     ageMessage.textContent = "Please, enter a valid age";
-  } else if (age < 0) {
-    ageMessage.textContent = "Please, enter a valid age";
-  } else if (age < 18 && age >= 0) {
+  } else if (age < 18) {
     ageMessage.textContent = "You are under 18.";
   } else if (age >= 18 && age <= 64) {
     ageMessage.textContent = "You are an adult";
   } else {
     ageMessage.textContent = "You are a senior.";
-  } 
+  }
 }
 
 document.getElementById("check-button").addEventListener("click", checkAge);
@@ -108,15 +109,15 @@ document.getElementById("check-button").addEventListener("click", checkAge);
 // ============================================================
 
 function subtractOne() {
+  const message = document.getElementById("message");
 
-
-  if (clicks>0) {
+  if (clicks > 0) {
     clicks = clicks - 1;
     updateDisplay();
-    
-  } else if (clicks <= 0) {
-    message.textContent = "Can't go below zero"
-    message.classList.add("warning")
+
+  } else {
+    message.textContent = "Can't go below zero";
+    message.classList.add("warning");
   }
 }
 
